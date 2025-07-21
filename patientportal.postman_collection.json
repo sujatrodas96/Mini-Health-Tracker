@@ -1,0 +1,538 @@
+{
+	"info": {
+		"_postman_id": "d3574430-ece0-4d42-b857-8e989c2c3ed0",
+		"name": "patientportal",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27276053"
+	},
+	"item": [
+		{
+			"name": "register-admin/coach/patient-with-role",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"suj.das98@gmail.com\",\r\n  \"password\": \"Sujatro@123\",\r\n  \"role\": \"patient\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:1111/api/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1111",
+					"path": [
+						"api",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"sujatro.das96@gmail.com\",\r\n  \"password\": \"Sujatro@123\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:1111/api/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1111",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create-patient-by-admin/coach",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "s.das98@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "Sujatro sengupta",
+							"type": "text"
+						},
+						{
+							"key": "age",
+							"value": "39",
+							"type": "text"
+						},
+						{
+							"key": "weight",
+							"value": "76",
+							"type": "text"
+						},
+						{
+							"key": "fatPercent",
+							"value": "17",
+							"type": "text"
+						},
+						{
+							"key": "profileImage",
+							"type": "file",
+							"src": "/C:/Users/Admin/Downloads/ChatGPT Image Jul 21, 2025, 12_22_05 AM.png"
+						},
+						{
+							"key": "report",
+							"type": "file",
+							"src": []
+						},
+						{
+							"key": "phone",
+							"value": "8989126718",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:1111/api/patients/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1111",
+					"path": [
+						"api",
+						"patients",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "allpatient-by-admin-coach",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "s.das98@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "Sujatro sengupta",
+							"type": "text"
+						},
+						{
+							"key": "age",
+							"value": "39",
+							"type": "text"
+						},
+						{
+							"key": "weight",
+							"value": "76",
+							"type": "text"
+						},
+						{
+							"key": "fatPercent",
+							"value": "17",
+							"type": "text"
+						},
+						{
+							"key": "profileImage",
+							"type": "file",
+							"src": "/C:/Users/Admin/Downloads/ChatGPT Image Jul 21, 2025, 12_22_05 AM.png"
+						},
+						{
+							"key": "report",
+							"type": "file",
+							"src": []
+						},
+						{
+							"key": "phone",
+							"value": "8989126718",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:1111/api/patients/allpatients",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1111",
+					"path": [
+						"api",
+						"patients",
+						"allpatients"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getting-details-with-id-only-own-details",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "s.das98@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "Sujatro sengupta",
+							"type": "text"
+						},
+						{
+							"key": "age",
+							"value": "39",
+							"type": "text"
+						},
+						{
+							"key": "weight",
+							"value": "76",
+							"type": "text"
+						},
+						{
+							"key": "fatPercent",
+							"value": "17",
+							"type": "text"
+						},
+						{
+							"key": "profileImage",
+							"type": "file",
+							"src": "/C:/Users/Admin/Downloads/ChatGPT Image Jul 21, 2025, 12_22_05 AM.png"
+						},
+						{
+							"key": "report",
+							"type": "file",
+							"src": []
+						},
+						{
+							"key": "phone",
+							"value": "8989126718",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:1111/api/patients/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1111",
+					"path": [
+						"api",
+						"patients",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "dashboardview-by-admin",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Satyaki\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:1111/api/dashboard/admin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1111",
+					"path": [
+						"api",
+						"dashboard",
+						"admin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "editpatient",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"saikat\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:1111/api/patients/edit/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1111",
+					"path": [
+						"api",
+						"patients",
+						"edit",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getting-user-details-through-email-own-details-only",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"saikat\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:1111/api/patients/email/:email",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1111",
+					"path": [
+						"api",
+						"patients",
+						"email",
+						":email"
+					],
+					"variable": [
+						{
+							"key": "email",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deletepatient",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"saikat\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:1111/api/patients/delete/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1111",
+					"path": [
+						"api",
+						"patients",
+						"delete",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "logout",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:1111/api/auth/logout",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1111",
+					"path": [
+						"api",
+						"auth",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "report-reminder",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"patientId\":\"687ebe7ec4f7b28e7e5a8383\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:1111/api/jobs/reminder",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1111",
+					"path": [
+						"api",
+						"jobs",
+						"reminder"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "send-report",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:1111/api/jobs/send-report",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1111",
+					"path": [
+						"api",
+						"jobs",
+						"send-report"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Bull-Dashboard",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:1111/admin/queues/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1111",
+					"path": [
+						"admin",
+						"queues",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
