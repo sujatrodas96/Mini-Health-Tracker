@@ -1,0 +1,33 @@
+[
+
+  {
+    "template": "Sujatro sengupta your profile created successfully",
+    "message": "WhatsApp message sent to undefined",
+    "status": "SENT",
+    "timestamp": "2025-07-21T22:26:08.724Z"
+  },
+  {
+    "template": "Sujatro sengupta, your nutrition report is ready",
+    "message": "WhatsApp message sent to undefined",
+    "status": "SENT",
+    "timestamp": "2025-07-21T22:26:51.496Z"
+  },
+  {
+    "template": "Sujatro sengupta, you have a coach call reminder",
+    "message": "WhatsApp message sent to undefined",
+    "status": "SENT",
+    "timestamp": "2025-07-21T22:27:38.655Z"
+  },
+  {
+    "template": "Saibal your profile Updated successfully",
+    "message": "WhatsApp message sent to undefined",
+    "status": "SENT",
+    "timestamp": "2025-07-21T22:33:37.098Z"
+  },
+  {
+    "template": "saikat your profile Updated successfully",
+    "message": "WhatsApp message sent to undefined",
+    "status": "SENT",
+    "timestamp": "2025-07-21T22:34:31.397Z"
+  }
+]
