@@ -1,19 +1,23 @@
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const User = require('../Models/User');
-
+const {sendWelcomeEmail} = require('../utils/mailsend');
 
 exports.register = async (req, res) => {
   const { email, password, role } = req.body;
+
   try {
     const hashedPassword = await bcrypt.hash(password, 10);
     const user = await User.create({ email, password: hashedPassword, role });
+
+    // Send welcome email
+     await sendWelcomeEmail({ email: user.email });
+
     res.status(201).json({ message: 'User registered', email: user.email });
   } catch (err) {
     res.status(400).json({ error: err.message });
   }
 };
-
 
 exports.login = async (req, res) => {
   const { email, password } = req.body;

@@ -4,10 +4,12 @@ const User = require('../Models/User');
 const generateDummyReport = require('../utils/pdfGenerator');
 const { addCRMSyncJob } = require('../utils/queues');
 const { addWhatsAppJob } = require('../utils/queues');
+const { sendWelcomePatientEmail } = require('../utils/patientprofilecreatemail');
+const {sendWhatsAppMessage} = require('../utils/whatsappmsg');
 
 exports.createPatient = async (req, res) => {
   try {
-    const { email, name, age, weight, fatPercent } = req.body;
+    const { email, name, age, phone, weight, fatPercent } = req.body;
 
     if (!email) {
       return res.status(400).json({ error: 'Email is required' });
@@ -52,19 +54,19 @@ exports.createPatient = async (req, res) => {
     const newPatient = await Patient.create({
       userId: user._id,
       name,
-      email, 
+      email,
+      phone,
       age,
       weight,
       fatPercent,
       profileImage,
       report: reportPath
     });
-
+    await sendWelcomePatientEmail(newPatient);
+    await sendWhatsAppMessage(phone, `Hello ${name}, Thank you for creating your profile in our platform 🚀`);
     // Mock background tasks safely
     let reportQueued = true;
     let crmSynced = true;
-
-    
 
     try {
       await addWhatsAppJob(email, `${name} your profile created successfully` );

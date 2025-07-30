@@ -14,6 +14,11 @@ const patientSchema = new mongoose.Schema({
   },
   name: { type: String, required: true },
   age: Number,
+  phone:{
+    type: String,
+    required: true,
+    unique: true
+  },
   weight: Number,
   fatPercent: Number,
   profileImage: String,

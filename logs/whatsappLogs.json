@@ -1,5 +1,4 @@
 [
-
   {
     "template": "Sujatro sengupta your profile created successfully",
     "message": "WhatsApp message sent to undefined",
@@ -29,5 +28,29 @@
     "message": "WhatsApp message sent to undefined",
     "status": "SENT",
     "timestamp": "2025-07-21T22:34:31.397Z"
+  },
+  {
+    "template": "Sunil Kumar Das your profile created successfully",
+    "message": "WhatsApp message sent to undefined",
+    "status": "SENT",
+    "timestamp": "2025-07-30T14:05:47.675Z"
+  },
+  {
+    "template": "Sunil Kumar Das your profile created successfully",
+    "message": "WhatsApp message sent to undefined",
+    "status": "SENT",
+    "timestamp": "2025-07-30T14:09:27.602Z"
+  },
+  {
+    "template": "Sunil Kumar Das your profile created successfully",
+    "message": "WhatsApp message sent to undefined",
+    "status": "SENT",
+    "timestamp": "2025-07-30T19:18:32.003Z"
+  },
+  {
+    "template": "Sunil Kumar Das your profile created successfully",
+    "message": "WhatsApp message sent to undefined",
+    "status": "SENT",
+    "timestamp": "2025-07-30T19:48:53.116Z"
   }
 ]
